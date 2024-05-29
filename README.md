@@ -1,71 +1,42 @@
-# Vaadin Gradle Skeleton Starter Spring Boot
+# Airport Hater App
+If you hate airports, this is your place.
 
-This project demos the possibility of having Vaadin project in npm+webpack mode using Gradle.
-Please see the [Starting a Vaadin project using Gradle](https://vaadin.com/docs/latest/guide/start/gradle) for the documentation.
+## Link do aplikacji backendowej:
+
+https://github.com/ZuzaJaworska/Airport-hater_backend
 
 
-Prerequisites:
-* Java 17 or higher
-* Git
-* (Optionally): Intellij Community
-* (Optionally): Node.js and npm, if you have JavaScript/TypeScript customisations in your project.
-  * You can either let the Vaadin Gradle plugin to install `Node.js` and `npm/pnpm` for you automatically, or you can install it to your OS:
-  * Windows: [node.js Download site](https://nodejs.org/en/download/) - use the .msi 64-bit installer
-  * Linux: `sudo apt install npm`
+### Link do commita z ostatnimi zmianami aplikacji frontendowej:
 
-## Vaadin Versions
 
-* The [v24](https://github.com/vaadin/base-starter-spring-gradle) branch (the default one) contains the example app for Vaadin latest version
-* See other branches for other Vaadin versions.
 
-## Running With Spring Boot via Gradle In Development Mode
+### Opis aplikacji
+Aplikacja służy do komentowania i oceniania lotnisk, a dane o użytkownikach, lotniskach i komentarze są zapisywane lokalnie w bazie danych.
+* Wykorzystano każdą z poznanych metod HTTP: GET, POST, PUT oraz DELETE.
+* Wykorzystano dwa źródła zewnętrzne:
+  * Airports By API Venue - aby pozyskać oficjalne dane o lotniskach i zapisać je w naszej aplikacji;
+  * WeatherAPI.com By WeatherAPI.com - aby pozyskać dane o pogodzie panującej w czasie rzeczywistym na danym lotnisku.
+* Zastosowano scheduler do wysyłania maili na trzy okoliczności:
+  * co tydzień w poniedziałek o 10 rano - cotygodniowy newsletter;
+  * gdy zostaje dodane lotnisko do bazy danych z aplikacji zewnętrznej;
+  * gdy średnia ocena jakiegoś lotniska spadnie poniżej 3.0/10.
+* Do warstwy widoku wykorzystano bibliotekę Vaadin.
 
-Run the following command in this repo:
+### Wymagania
+Projekt wymaga bazy danych pod nazwą airport_hater z użytkownikiem i hasłem określonymi w pliku application.properties w aplikacji backendowej.
 
-```bash
-./gradlew clean bootRun
-```
+###  Instrukcja uruchomienia
+Aby uruchomić program należy:
+1. uruchomić aplikację backendową - aplikacja pracuje na porcie 8080 
+2. następnie uruchomić aplikację frontendową - aplikacja pracuje na porcie 8888
+3. żeby korzystać z programu w przeglądarce należy wejść na
+http://localhost:8888/
+4. kolejność działań w aplikacji:
+   * stworzenie użytkownika (bez tego kroku nie można dodać komentarza);
+   * w zakładce Airports - pozyskanie danych o lotnisku poprzez wyszukanie go w zewnętrznym API - należy wyszukać lotnisko przez kod IATA i zatwierdzić przyciskiem "Search and Save", aby dane zostały zapisane w naszej bazie danych;
+   * dodanie komentarza i ocenienie lotniska;
+   * po tych podstawowych działaniach można zablokować użytkownika, odblokować użytkownika, sprawdzić pogodę dla danego lotniska, sprawdzać powiązania między komentarzami a użytkownikiem lub lotniskiem, kasować użytkowników, lotniska oraz komentarze.
 
-Now you can open the [http://localhost:8080](http://localhost:8080) with your browser.
+Nie ma zabezpieczeń powstrzymujących przed kasowaniem użytkownika, lotniska i komentarza oraz nie ma ograniczeń dla zablokowanych użytkowników - będzie to dodane w przyszłości przez przypisanie użytkownikom ról admina lub zwykłego użytkownika.
 
-## Running With Spring Boot from your IDE In Development Mode
-
-Run the following command in this repo, to create necessary Vaadin config files:
-
-```bash
-./gradlew clean vaadinPrepareFrontend
-```
-
-The `build/vaadin-generated/` folder will now contain proper configuration files.
-
-Open the `DemoApplication` class, and Run/Debug its main method from your IDE.
-
-Now you can open the [http://localhost:8080](http://localhost:8080) with your browser.
-
-## Building In Production Mode
-
-Run the following command in this repo:
-
-```bash
-./gradlew clean build -Pvaadin.productionMode
-```
-
-That will build this app in production mode as a runnable jar archive; please find the jar file in `build/libs/base-starter-spring-gradle*.jar`.
-You can run the JAR file with:
-
-```bash
-cd build/libs/
-java -jar base-starter-spring-gradle*.jar
-```
-
-Now you can open the [http://localhost:8080](http://localhost:8080) with your browser.
-
-### Building In Production On CI
-
-Usually the CI images will not have node.js+npm available. Vaadin uses pre-compiled bundle when possible, i.e. Node.js is not always needed.
-Or Vaadin Gradle Plugin will download Node.js for you automatically if it finds any front-end customisations, there is no need for you to do anything.
-To build your app for production in CI, just run:
-
-```bash
-./gradlew clean build -Pvaadin.productionMode
-```
+### Życzę miłego oceniania lotnisk!
