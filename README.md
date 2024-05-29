@@ -8,7 +8,7 @@ https://github.com/ZuzaJaworska/Airport-hater_backend
 
 ### Link do commita z ostatnimi zmianami aplikacji frontendowej:
 
-
+https://github.com/ZuzaJaworska/Airport-hater_frontend/commit/fcfa1689680a481b4f514d423667b6ac15bd3d54
 
 ### Opis aplikacji
 Aplikacja służy do komentowania i oceniania lotnisk, a dane o użytkownikach, lotniskach i komentarze są zapisywane lokalnie w bazie danych.
@@ -37,6 +37,6 @@ http://localhost:8888/
    * dodanie komentarza i ocenienie lotniska;
    * po tych podstawowych działaniach można zablokować użytkownika, odblokować użytkownika, sprawdzić pogodę dla danego lotniska, sprawdzać powiązania między komentarzami a użytkownikiem lub lotniskiem, kasować użytkowników, lotniska oraz komentarze.
 
-Nie ma zabezpieczeń powstrzymujących przed kasowaniem użytkownika, lotniska i komentarza oraz nie ma ograniczeń dla zablokowanych użytkowników - będzie to dodane w przyszłości przez przypisanie użytkownikom ról admina lub zwykłego użytkownika.
+###### Uwagi: Nie ma zabezpieczeń powstrzymujących przed kasowaniem użytkownika, lotniska i komentarza oraz nie ma ograniczeń dla zablokowanych użytkowników - będzie to dodane w przyszłości przez przypisanie użytkownikom ról admina lub zwykłego użytkownika.
 
 ### Życzę miłego oceniania lotnisk!
