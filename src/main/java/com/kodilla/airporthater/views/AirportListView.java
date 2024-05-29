@@ -51,7 +51,7 @@ public class AirportListView extends VerticalLayout {
     }
 
     private void addSearchFieldAndButton() {
-        TextField iataCodeField = new TextField("Enter IATA code");
+        TextField iataCodeField = new TextField("Enter IATA (uppercase)");
         Button searchButton = new Button("Search and Save");
         searchButton.addClickListener(event -> {
             String iataCode = iataCodeField.getValue();

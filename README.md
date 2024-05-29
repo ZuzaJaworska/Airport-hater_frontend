@@ -1,14 +1,14 @@
 # Airport Hater App
-If you hate airports, this is your place.
+#### If airports are your nemesis, you're in the right place!
 
 ## Link do aplikacji backendowej:
 
 https://github.com/ZuzaJaworska/Airport-hater_backend
 
+### Link do ostatniego commita aplikacji backendowej:
 
-### Link do commita z ostatnimi zmianami aplikacji frontendowej:
 
-https://github.com/ZuzaJaworska/Airport-hater_frontend/commit/fcfa1689680a481b4f514d423667b6ac15bd3d54
+
 
 ### Opis aplikacji
 Aplikacja służy do komentowania i oceniania lotnisk, a dane o użytkownikach, lotniskach i komentarze są zapisywane lokalnie w bazie danych.

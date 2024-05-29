@@ -45,7 +45,7 @@ public class AirportCommentsView extends VerticalLayout implements HasUrlParamet
 
             add(grid);
 
-            H3 addCommentTitle = new H3("Add Comment and rate it from 1 to 10");
+            H3 addCommentTitle = new H3("Add Comment and rate airport from 1 to 10:");
             add(addCommentTitle);
 
             FormLayout commentFormLayout = new FormLayout();
