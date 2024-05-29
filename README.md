@@ -7,8 +7,11 @@ https://github.com/ZuzaJaworska/Airport-hater_backend
 
 ### Link do ostatniego commita aplikacji backendowej:
 
+https://github.com/ZuzaJaworska/Airport-hater_backend/commit/945d1d11bb98db912893a5c1efdb889ff6928106
 
+### Link do ostatniego commita aplikacji frontendowej:
 
+https://github.com/ZuzaJaworska/Airport-hater_frontend/commit/1f48248184c716e631540853460666700688a3cb
 
 ### Opis aplikacji
 Aplikacja służy do komentowania i oceniania lotnisk, a dane o użytkownikach, lotniskach i komentarze są zapisywane lokalnie w bazie danych.
