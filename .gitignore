@@ -34,6 +34,14 @@ out/
 ### VS Code ###
 .vscode/
 
+/LICENSE
+/package.json
+/package-lock.json
+/tsconfig.json
+/types.d.ts
+/vite.config.ts
+/vite.generated.ts
+
 # The following files are generated/updated by vaadin-gradle-plugin
 node_modules/
 webpack.generated.js
