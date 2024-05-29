@@ -38,3 +38,12 @@ out/
 
 ### VS Code ###
 .vscode/
+
+LICENSE
+package.json
+package-lock.json
+tsconfig.json
+types.d.ts
+vite.config.ts
+vite.generated.ts
+
